@@ -15,7 +15,7 @@ $obj = json_decode(file_get_contents("php://input"), true);
 
 // fwrite($myfile, $obj);
 // fclose($myfile);
-$time = date("h:i:sa");
+// $time = date("h:i:sa");
 // $data = [
 //     'valve_0' => [
 //         'status' => $obj
@@ -42,8 +42,8 @@ $time = date("h:i:sa");
     //     'soil_moisure' => $obj['node_2']['soil_moisure'],
     //     'soil_temperature' => $obj['node_2']['soil_temperature']
     // ],
-    'time' => $time
-];
+//     'time' => $time
+// ];
 
 $firebase->push($obj, 'data');
 
