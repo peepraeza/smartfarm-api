@@ -16,10 +16,10 @@ $obj = json_decode(file_get_contents("php://input"), true);
 // fwrite($myfile, $obj);
 // fclose($myfile);
 $time = date("h:i:sa");
-$data = [
-    'valve_0' => [
-        'status' => $obj
-    ],
+// $data = [
+//     'valve_0' => [
+//         'status' => $obj
+//     ],
     // 'o_node_0' => [
     //     'air_temperature' => $obj['o_node_0']['air_temperature'],
     //     'air_humidity' => $obj['o_node_0']['air_humidity']
@@ -45,6 +45,6 @@ $data = [
     'time' => $time
 ];
 
-$firebase->push($data, 'data');
+$firebase->push($obj, 'data');
 
 ?>
