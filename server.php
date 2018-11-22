@@ -8,7 +8,7 @@ $config->setAuthConfigFile(__DIR__.'google-service-account.json');
 
 $firebase = new Firebase('https://smart-farm-27e2b.firebaseio.com/', $config);
 
-echo "ok1";
+echo "ok";
 $obj = json_decode(file_get_contents("php://input"), true);
 $table = $obj['node'];
 
@@ -22,6 +22,6 @@ $data = [
     'time' => $time
 ];
 
-$firebase->push($obj, $table);
+$firebase->push($data, $table);
 
 ?>
