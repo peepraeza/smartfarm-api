@@ -19,7 +19,7 @@ $data = [
         'soil_moisure' => $obj['data']['soil_moisure'],
         'soil_temperature' => $obj['data']['soil_temperature']
     ],
-    'time' => $time
+    'time' => $obj['data']['time']
 ];
 
 $firebase->push($data, $table);
