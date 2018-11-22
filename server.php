@@ -10,7 +10,7 @@ $firebase = new Firebase('https://smart-farm-27e2b.firebaseio.com/', $config);
 
 // date_default_timezone_set("Asia/Bangkok"); // php://input
 $obj = json_decode(file_get_contents("php://input"), true);
-$table = $obj['node'];
+// $table = $obj['node'];
 // $time = date("h:i:sa");
 // {
 //   "node" : "o_node_0",
@@ -45,6 +45,6 @@ $table = $obj['node'];
 //     'time' => $time
 // ];
 
-$firebase->push($obj, $table);
+$firebase->push($obj, 'test');
 
 ?>
