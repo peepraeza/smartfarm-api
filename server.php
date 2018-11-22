@@ -9,6 +9,7 @@ $config->setAuthConfigFile(__DIR__.'google-service-account.json');
 $firebase = new Firebase('https://smart-farm-27e2b.firebaseio.com/', $config);
 
 // date_default_timezone_set("Asia/Bangkok"); // php://input
+echo "ok";
 $obj = json_decode(file_get_contents("php://input"), true);
 // $table = $obj['node'];
 // $time = date("h:i:sa");
@@ -45,6 +46,6 @@ $obj = json_decode(file_get_contents("php://input"), true);
 //     'time' => $time
 // ];
 
-$firebase->push($obj, 'test');
+$firebase->push($obj, 'data2');
 
 ?>
