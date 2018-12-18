@@ -24,8 +24,8 @@ echo "ok";
 
 // $firebase->push($data, $table);
 
-$update_data = ['Valve1' => 'on']
+// $update_data = ['Valve1' => 'on']
 
-$firebase->update($update_data, 'Valve_Status');
+// $firebase->update($update_data, 'Valve_Status');
 ?>
 
